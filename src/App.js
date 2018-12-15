@@ -2,13 +2,27 @@ import React, { Component } from 'react';
 import LineExample from './line';
 import './App.css';
 
+
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      isHidden: true
+    }
+  }
   render() {
     return (
       <div className='App'>
-        <LineExample data="this.getData()"></LineExample>
+        <button onClick={this.toggleLine.bind(this)}>{this.state.isHidden?'Show':'Hide'}</button>
+        {!this.state.isHidden && <LineExample></LineExample>}
       </div>
     );
+  }
+
+  toggleLine() {
+    this.setState({
+      isHidden :  !this.state.isHidden
+    })    
   }
 
   getData() {
