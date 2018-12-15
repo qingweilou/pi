@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <button onClick={this.toggleLine.bind(this)}>{this.state.isHidden?'Show':'Hide'}</button>
+        <button onClick={this.toggleLine.bind(this)}>{this.state.isHidden?'Display':'Hide'}</button>
         {!this.state.isHidden && <LineExample></LineExample>}
       </div>
     );
