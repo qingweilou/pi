@@ -1,0 +1,11 @@
+.Title{
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    font-style: italic;
+}
+
+.DateRange {
+    font-size: 12px;
+    font-weight: 100px;
+}
